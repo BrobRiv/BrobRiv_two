@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+}
+
+header {
+    background: #fd0404;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.menu {
+    width: 90%;
+    max-width: 62.5em;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu .logo {
+    color: rgb(5, 5, 5);
+    font-size: 1.875rem;
+    text-shadow: 4px 4px 7px rgb(121, 88, 45);
+    display: inline-block;
+    margin-right: 1em;
+}
+.menu .btn-menu {
+    display: none;
+    color: rgb(253, 5, 5);
+    text-decoration: none;
+    font-size: 1em;
+    
+}
+
+.menu .logo:hover {
+    background: #fc7b04;
+}
+
+.menu .enlaces {
+    display: inline-block;
+    text-align: right;
+}
+
+.menu .enlaces a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.menu .enlaces i {
+    margin-right: 5px;
+}
+
+.menu .enlaces a:hover {
+    background: #f2f2f2;
+    color: #4357ad;
+}
+
+/* Efectos del menu */
+.headroom {
+    transition: transform .3s ease;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center; 
+    margin-top: 30px;
+  }
+.texto p {
+    color: rgb(17, 0, 255);
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    text-align: center;
+  }
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: hsl(202, 86%, 51%);
+    color: white;
+    text-shadow: 3px 3px 7px black;
+    text-align: center;
+	padding-top: 0%;
+    padding: 14px 16px;
+}
+/* Media queries */
+@media screen and (max-width: 700px) {
+    header .menu {
+        flex-direction:column;
+    }
+
+    header .menu .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+@media screen and (min-width: 700px) {
+    header .menu {
+        flex-direction:column;
+    }
+
+    header .menu .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+
+    header .menu .logo .btn-menu {
+        display: inline-block;
+    }
+
+    header .menu .enlaces {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
